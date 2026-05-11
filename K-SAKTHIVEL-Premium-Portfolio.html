@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K. SAKTHIVEL | Premium Videography & Digital Marketing Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0a0e27;
+            --secondary: #ffffff;
+            --accent: #ff5f4f;
+            --accent-light: #ff8a7a;
+            --accent-dark: #e54839;
+            --text-light: #f5f5f5;
+            --text-dark: #1a1a1a;
+            --border: #2a2a3a;
+            --shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+            --transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--primary);
+            color: var(--text-light);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* ============ HEADER & NAVIGATION ============ */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            background: rgba(10, 14, 39, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 95, 79, 0.1);
+            padding: 1.5rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 600;
+            font-size: 0.9rem;
+            position: relative;
+            transition: var(--transition);
+            opacity: 0;
+            animation: slideDown 0.8s ease-out forwards;
+        }
+
+        nav a:nth-child(1) { animation-delay: 0.1s; }
+        nav a:nth-child(2) { animation-delay: 0.2s; }
+        nav a:nth-child(3) { animation-delay: 0.3s; }
+        nav a:nth-child(4) { animation-delay: 0.4s; }
+        nav a:nth-child(5) { animation-delay: 0.5s; }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(255, 95, 79, 0.3);
+            opacity: 0;
+            animation: slideDown 0.8s ease-out 0.6s forwards;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(255, 95, 79, 0.4);
+        }
+
+        /* ============ HERO SECTION ============ */
+        .hero {
+            margin-top: 80px;
+            min-height: 100vh;
+            background: linear-gradient(135deg, rgba(10, 14, 39, 1) 0%, rgba(20, 24, 60, 1) 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 95, 79, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -5%;
+            left: -5%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 95, 79, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 10s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            50% { transform: translateY(-40px) translateX(20px); }
+        }
+
+        .hero-content {
+            max-width: 1600px;
+            width: 100%;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(2.8rem, 8vw, 5rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+            color: var(--text-light);
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .hero-name {
+            font-size: 1.3rem;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            animation: slideUp 0.8s ease-out 0.05s both;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-text h1 .highlight {
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: slideUp 0.8s ease-out 0.1s both;
+        }
+
+        .hero-text .description {
+            font-size: 1.1rem;
+            color: #aaa;
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            max-width: 500px;
+            animation: slideUp 0.8s ease-out 0.2s both;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1.5rem;
+            animation: slideUp 0.8s ease-out 0.3s both;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: var(--transition);
+            box-shadow: 0 15px 40px rgba(255, 95, 79, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.5s ease;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 50px rgba(255, 95, 79, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            border: 2px solid var(--accent);
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-secondary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--accent);
+            z-index: -1;
+            transition: left 0.5s ease;
+        }
+
+        .btn-secondary:hover::before {
+            left: 0;
+        }
+
+        .btn-secondary:hover {
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            position: relative;
+            animation: slideUp 0.8s ease-out 0.2s both;
+        }
+
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 3/4;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 2px solid rgba(255, 95, 79, 0.3);
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: zoomIn 1.2s ease-out;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(1.1);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        .scroll-indicator span {
+            font-size: 0.8rem;
+            color: var(--accent);
+            opacity: 0.7;
+        }
+
+        /* ============ ABOUT SECTION ============ */
+        .about {
+            padding: 8rem 2rem;
+            background: linear-gradient(180deg, var(--primary) 0%, rgba(20, 24, 60, 1) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+        }
+
+        .section-container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            font-weight: 900;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .section-header h2 .highlight {
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #aaa;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: slideUp 0.8s ease-out 0.1s both;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-content h3 {
+            font-size: 1.8rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            font-weight: 700;
+            animation: slideUp 0.8s ease-out 0.2s both;
+        }
+
+        .about-content p {
+            font-size: 1.05rem;
+            color: #bbb;
+            line-height: 2;
+            margin-bottom: 1.5rem;
+            animation: slideUp 0.8s ease-out 0.3s both;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            aspect-ratio: 3/4;
+            border: 2px solid rgba(255, 95, 79, 0.2);
+            animation: slideUp 0.8s ease-out 0.2s both;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: zoomIn 1.2s ease-out;
+        }
+
+        /* ============ PORTFOLIO SECTION ============ */
+        .portfolio {
+            padding: 8rem 2rem;
+            background: var(--primary);
+        }
+
+        .portfolio-intro {
+            text-align: center;
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .portfolio-intro p {
+            font-size: 1.3rem;
+            color: var(--accent);
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .portfolio-grid {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 25px;
+            overflow: hidden;
+            cursor: pointer;
+            group: hover;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .portfolio-item:nth-child(1) { animation-delay: 0.1s; }
+        .portfolio-item:nth-child(2) { animation-delay: 0.2s; }
+        .portfolio-item:nth-child(3) { animation-delay: 0.3s; }
+        .portfolio-item:nth-child(4) { animation-delay: 0.4s; }
+        .portfolio-item:nth-child(5) { animation-delay: 0.5s; }
+
+        .portfolio-image {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 95, 79, 0.2);
+            background: #1a1a1a;
+        }
+
+        .portfolio-image img,
+        .portfolio-image video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover .portfolio-image img,
+        .portfolio-item:hover .portfolio-image video {
+            transform: scale(1.08);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio-description {
+            font-size: 0.95rem;
+            color: #bbb;
+        }
+
+        .portfolio-tag {
+            display: inline-block;
+            background: rgba(255, 95, 79, 0.2);
+            color: var(--accent);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            border: 1px solid rgba(255, 95, 79, 0.4);
+        }
+
+        /* ============ HERO VIDEO SECTION ============ */
+        .video-showcase {
+            padding: 8rem 2rem;
+            background: linear-gradient(180deg, var(--primary) 0%, rgba(20, 24, 60, 1) 100%);
+            position: relative;
+        }
+
+        .video-showcase::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+        }
+
+        .video-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 2px solid rgba(255, 95, 79, 0.2);
+            animation: slideUp 0.8s ease-out 0.2s both;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ============ SKILLS SECTION ============ */
+        .skills {
+            padding: 8rem 2rem;
+            background: var(--primary);
+            position: relative;
+        }
+
+        .skills-grid {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, rgba(255, 95, 79, 0.05), rgba(255, 95, 79, 0.02));
+            border: 1px solid rgba(255, 95, 79, 0.2);
+            padding: 2.5rem;
+            border-radius: 25px;
+            transition: var(--transition);
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .skill-card:nth-child(1) { animation-delay: 0.1s; }
+        .skill-card:nth-child(2) { animation-delay: 0.2s; }
+        .skill-card:nth-child(3) { animation-delay: 0.3s; }
+        .skill-card:nth-child(4) { animation-delay: 0.4s; }
+        .skill-card:nth-child(5) { animation-delay: 0.5s; }
+
+        .skill-card:hover {
+            background: linear-gradient(135deg, rgba(255, 95, 79, 0.15), rgba(255, 95, 79, 0.08));
+            border-color: var(--accent);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(255, 95, 79, 0.2);
+        }
+
+        .skill-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .skill-title::before {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { 
+                box-shadow: 0 0 0 0 rgba(255, 95, 79, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 10px rgba(255, 95, 79, 0);
+            }
+        }
+
+        .skill-list {
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.95rem;
+            color: #aaa;
+        }
+
+        .skill-item::before {
+            content: '→';
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* ============ ACHIEVEMENTS SECTION ============ */
+        .achievements {
+            padding: 8rem 2rem;
+            background: linear-gradient(180deg, var(--primary) 0%, rgba(20, 24, 60, 1) 100%);
+        }
+
+        .achievements::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+        }
+
+        .achievements-grid {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .achievement-card {
+            background: linear-gradient(135deg, rgba(255, 95, 79, 0.08), rgba(255, 95, 79, 0.03));
+            border: 1px solid rgba(255, 95, 79, 0.2);
+            padding: 2.5rem;
+            border-radius: 25px;
+            transition: var(--transition);
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .achievement-card:nth-child(1) { animation-delay: 0.1s; }
+        .achievement-card:nth-child(2) { animation-delay: 0.2s; }
+        .achievement-card:nth-child(3) { animation-delay: 0.3s; }
+        .achievement-card:nth-child(4) { animation-delay: 0.4s; }
+        .achievement-card:nth-child(5) { animation-delay: 0.5s; }
+        .achievement-card:nth-child(6) { animation-delay: 0.6s; }
+
+        .achievement-card:hover {
+            background: linear-gradient(135deg, rgba(255, 95, 79, 0.15), rgba(255, 95, 79, 0.08));
+            border-color: var(--accent);
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px rgba(255, 95, 79, 0.2);
+        }
+
+        .achievement-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .achievement-card h3 {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .achievement-card p {
+            font-size: 0.95rem;
+            color: #aaa;
+            line-height: 1.8;
+        }
+
+        /* ============ CONTACT SECTION ============ */
+        .contact {
+            padding: 8rem 2rem;
+            background: var(--primary);
+            position: relative;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+        }
+
+        .contact-grid {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .contact-text h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            font-weight: 700;
+            animation: slideUp 0.8s ease-out 0.1s both;
+        }
+
+        .contact-text p {
+            font-size: 1.05rem;
+            color: #aaa;
+            line-height: 1.9;
+            margin-bottom: 2rem;
+            animation: slideUp 0.8s ease-out 0.2s both;
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            animation: slideUp 0.8s ease-out 0.3s both;
+        }
+
+        .contact-btn {
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            color: white;
+            padding: 1.2rem 2rem;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            text-decoration: none;
+            box-shadow: 0 15px 40px rgba(255, 95, 79, 0.3);
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 50px rgba(255, 95, 79, 0.4);
+        }
+
+        .contact-btn.secondary {
+            background: transparent;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+        }
+
+        .contact-btn.secondary:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .contact-form {
+            background: linear-gradient(135deg, rgba(255, 95, 79, 0.05), rgba(255, 95, 79, 0.02));
+            border: 1px solid rgba(255, 95, 79, 0.2);
+            padding: 3.5rem;
+            border-radius: 25px;
+            animation: slideUp 0.8s ease-out 0.1s both;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 95, 79, 0.3);
+            border-radius: 15px;
+            color: var(--text-light);
+            font-family: inherit;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(255, 95, 79, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1rem;
+            width: 100%;
+            transition: var(--transition);
+            box-shadow: 0 15px 40px rgba(255, 95, 79, 0.3);
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 50px rgba(255, 95, 79, 0.4);
+        }
+
+        /* ============ FOOTER ============ */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            border-top: 1px solid rgba(255, 95, 79, 0.1);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: #aaa;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 95, 79, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* ============ RESPONSIVE DESIGN ============ */
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem 1.5rem;
+            }
+
+            nav ul {
+                gap: 1.5rem;
+                font-size: 0.8rem;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                margin-top: -30px;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .cta-group {
+                flex-direction: column;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .contact-form {
+                padding: 2rem;
+            }
+
+            .portfolio-grid,
+            .skills-grid,
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+            }
+
+            .contact-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            nav ul {
+                gap: 0.8rem;
+            }
+        }
+
+        /* ============ ANIMATIONS ============ */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: var(--transition);
+        }
+
+        .animate-on-scroll.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">K. SAKTHIVEL</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Showreel</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Works</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#achievements">Growth</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><button class="cta-button">Let's Chat</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-name">K. SAKTHIVEL</p>
+                <h1>Turning Local Brands Into <span class="highlight">Powerful Digital Stories</span></h1>
+                <p class="subtitle">Digital Marketer | Videographer | Photographer | Editor</p>
+                <p class="description">From capturing cinematic visuals to building strong online presence, I help businesses grow through creative content and smart digital strategies. I don't just create videos — I create attention, engagement, and results.</p>
+                
+                <div class="cta-group">
+                    <button class="btn-primary">View My Works</button>
+                    <button class="btn-secondary">Let's Grow Your Brand</button>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" alt="K. SAKTHIVEL" style="background: linear-gradient(135deg, #ff5f4f, #ff8a7a);">
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>SCROLL</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>The Story Behind <span class="highlight">K. SAKTHIVEL</span></h2>
+                <p>From a college student with a camera to a digital marketing entrepreneur</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-content">
+                    <h3>Journey from Passion to Purpose</h3>
+                    <p>Born and raised in Karaikudi, the creative journey started long before becoming a business owner. After completing schooling, moved to Tiruchirappalli to pursue B.Com in Computer Applications at SRM Trichy Arts and Science College.</p>
+                    
+                    <p>During college days, passion for visuals was undeniable — capturing campus moments, creating engaging reels, and helping friends with photo and video editing. What began as passion slowly transformed into a professional calling.</p>
+
+                    <p>Leadership became evident during the final year, successfully leading a major reels creation competition. Today, as Founder & CEO of Brandaura.inn, the mission is clear: helping businesses build strong online presence through creative strategy, professional visuals, and impactful content.</p>
+
+                    <p>With trusted followers on Instagram, continuing to help local brands and businesses reach more people, attract customers, and grow confidently in the digital world.</p>
+                </div>
+
+                <div class="about-image">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" alt="About K. SAKTHIVEL" style="background: linear-gradient(135deg, #333, #555);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO SHOWCASE SECTION -->
+    <section class="video-showcase" id="video">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Featured <span class="highlight">Work Showcase</span></h2>
+                <p>Watch K. SAKTHIVEL's creative work in action</p>
+            </div>
+
+            <div class="video-container animate-on-scroll">
+                <video width="100%" height="auto" controls style="background: #000;">
+                    <source src="WhatsApp_Video_2026-05-11_at_12_52_16_PM.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section class="portfolio" id="portfolio">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Featured Creative <span class="highlight">Works</span></h2>
+                <p>Showcase of best projects and creative executions</p>
+            </div>
+
+            <div class="portfolio-intro">
+                <p>"Every frame tells a story. Every reel builds a brand."</p>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 - Main Hero Shot -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="1778488050622_image.png" alt="K. SAKTHIVEL - Photography">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-title">Premium Photography</div>
+                        <div class="portfolio-description">Professional portrait and lifestyle photography</div>
+                        <span class="portfolio-tag">Photography</span>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="1778488060125_image.png" alt="K. SAKTHIVEL - Creative Portrait">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-title">Creative Portraits</div>
+                        <div class="portfolio-description">Artistic portrait sessions with cinematic lighting</div>
+                        <span class="portfolio-tag">Portrait</span>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="1778488068506_image.png" alt="K. SAKTHIVEL - Lifestyle Photography">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-title">Lifestyle & Events</div>
+                        <div class="portfolio-description">Capturing real moments and community events</div>
+                        <span class="portfolio-tag">Events</span>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="1778488075710_image.png" alt="K. SAKTHIVEL - Professional Shoot">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-title">Professional Shoots</div>
+                        <div class="portfolio-description">High-quality production for brands and campaigns</div>
+                        <span class="portfolio-tag">Commercial</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="skills" id="skills">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>What I Do <span class="highlight">Best</span></h2>
+                <p>Comprehensive skill set spanning content creation, strategy, and business growth</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card animate-on-scroll">
+                    <div class="skill-title">Digital Marketing</div>
+                    <div class="skill-list">
+                        <div class="skill-item">Social Media Marketing</div>
+                        <div class="skill-item">Brand Strategy</div>
+                        <div class="skill-item">Content Planning</div>
+                        <div class="skill-item">Instagram Growth</div>
+                        <div class="skill-item">Audience Engagement</div>
+                    </div>
+                </div>
+
+                <div class="skill-card animate-on-scroll">
+                    <div class="skill-title">Content Creation</div>
+                    <div class="skill-list">
+                        <div class="skill-item">Reel Creation</div>
+                        <div class="skill-item">Cinematic Videos</div>
+                        <div class="skill-item">Short-form Content</div>
+                        <div class="skill-item">Creative Storytelling</div>
+                    </div>
+                </div>
+
+                <div class="skill-card animate-on-scroll">
+                    <div class="skill-title">Photography & Video</div>
+                    <div class="skill-list">
+                        <div class="skill-item">Product Photography</div>
+                        <div class="skill-item">Brand Shoots</div>
+                        <div class="skill-item">Event Coverage</div>
+                        <div class="skill-item">Promotional Videos</div>
+                    </div>
+                </div>
+
+                <div class="skill-card animate-on-scroll">
+                    <div class="skill-title">Editing & Post-Production</div>
+                    <div class="skill-list">
+                        <div class="skill-item">Video Editing</div>
+                        <div class="skill-item">Photo Retouching</div>
+                        <div class="skill-item">Color Grading</div>
+                        <div class="skill-item">Motion & Transitions</div>
+                    </div>
+                </div>
+
+                <div class="skill-card animate-on-scroll">
+                    <div class="skill-title">Business Management</div>
+                    <div class="skill-list">
+                        <div class="skill-item">Social Media Handling</div>
+                        <div class="skill-item">Client Communication</div>
+                        <div class="skill-item">Creative Direction</div>
+                        <div class="skill-item">Brand Positioning</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS SECTION -->
+    <section class="achievements" id="achievements">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Milestones & <span class="highlight">Growth Journey</span></h2>
+                <p>Recognizing growth from humble beginnings to professional success</p>
+            </div>
+
+            <div class="achievements-grid">
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon">📍</div>
+                    <h3>Started The Journey</h3>
+                    <p>What started as capturing campus memories became the foundation of a professional creative career.</p>
+                </div>
+
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon">🎥</div>
+                    <h3>College Reels Success</h3>
+                    <p>Created engaging reels that gained strong reach and appreciation on college social pages.</p>
+                </div>
+
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon">🏆</div>
+                    <h3>Led Major Event</h3>
+                    <p>Successfully led video editing competition during final year with creativity and coordination.</p>
+                </div>
+
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon">📸</div>
+                    <h3>Creative Recognition</h3>
+                    <p>Received certificates for creative contributions to cultural events and videography team.</p>
+                </div>
+
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon">🚀</div>
+                    <h3>Founded Brandaura.inn</h3>
+                    <p>Turned passion into profession with a digital marketing brand focused on business growth.</p>
+                </div>
+
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon">📈</div>
+                    <h3>Growing Businesses</h3>
+                    <p>Helping brands improve their online visibility and connect with audiences effectively.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Let's Build Your Brand <span class="highlight">Together</span></h2>
+                <p>Ready to transform your vision into powerful digital content</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-text">
+                    <h3>Ready to Transform Your Brand?</h3>
+                    <p>From strategy to shooting, editing to posting, everything is handled with creativity and consistency. Let's create something amazing together that captures attention and drives results.</p>
+                    
+                    <div class="contact-buttons">
+                        <a href="https://wa.me/918072169776" class="contact-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp (8072169776)
+                        </a>
+                        <a href="https://instagram.com/brandaura.inn" class="contact-btn secondary" target="_blank">
+                            <i class="fab fa-instagram"></i> Brandaura.inn
+                        </a>
+                        <a href="https://instagram.com/sakthyy.____" class="contact-btn secondary" target="_blank">
+                            <i class="fab fa-instagram"></i> Personal Page
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="project">Project Type</label>
+                        <input type="text" id="project" name="project" placeholder="e.g., Video Production, Photography, Social Media">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>K. SAKTHIVEL</h3>
+                    <p>Creative Digital Marketing • Videography • Photography • Editing</p>
+                    <p style="margin-top: 1rem; color: #999; font-size: 0.9rem;">Founder & CEO of Brandaura.inn | Helping brands grow through creativity, strategy, and impactful content.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Showreel</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Works</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#achievements">Growth</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="https://instagram.com/brandaura.inn" target="_blank">Brandaura.inn</a></li>
+                        <li><a href="https://instagram.com/sakthyy.____" target="_blank">Personal Profile</a></li>
+                        <li><a href="https://wa.me/918072169776" target="_blank">WhatsApp: 8072169776</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 K. SAKTHIVEL | Brandaura.inn — All Rights Reserved | Crafted with passion & creativity</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Scroll animations for elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const project = document.getElementById('project').value;
+            const message = document.getElementById('message').value;
+            
+            // Create WhatsApp message
+            const whatsappMessage = `Hi K. SAKTHIVEL! I'm ${name} (${email}). I'm interested in: ${project}. ${message}`;
+            const whatsappURL = `https://wa.me/918072169776?text=${encodeURIComponent(whatsappMessage)}`;
+            
+            window.open(whatsappURL, '_blank');
+            
+            // Reset form
+            event.target.reset();
+            alert('Redirecting to WhatsApp...');
+        }
+
+        // Header scroll effect
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 100) {
+                header.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.3)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+
+        // Active navigation link highlighting
+        window.addEventListener('scroll', function() {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop >= sectionTop - 250) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('nav a').forEach(link => {
+                link.style.color = 'var(--text-light)';
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.style.color = 'var(--accent)';
+                }
+            });
+        });
+
+        // Parallax effect on scroll
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop < window.innerHeight) {
+                document.querySelectorAll('.image-wrapper img').forEach(img => {
+                    img.style.transform = `translateY(${scrollTop * 0.5}px)`;
+                });
+            }
+        });
+    </script>
+</body>
+</html>
